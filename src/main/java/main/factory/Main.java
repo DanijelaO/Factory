@@ -1,41 +1,50 @@
-
 package main.factory;
-
-
+/**
+ *
+ * @author qa
+ */
 public class Main {
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+      
+        Car fiat = new Car("FiatPunto", 2010, "black", 45, 15, 8);
+        fiat.showData();
         
-        System.out.println("Pocetak");
+        // fiat.model = "Fiat Punto";
+        // fiat.buildYear = 2010;
+        // fiat.color = "black";
+        // fiat.consumption = 6;
+        // fiat.maxSpeed = 180;
+        // fiat.currentFuel = 20;
+        // fiat.maxFuel = 45;
         
-        Car fiat = new Car();
-        fiat.model = "Fiat Punto";
-        fiat.buildYear = 2010;
-        fiat.color ="black";
-        fiat.consumption = 6;
-        fiat.maxSpeed = 180;
-        fiat.currentFuell = 20;
-        fiat.maxFuell = 45;
+        fiat.setModel("Fiat Punto");
+        fiat.setColor("black");
+        fiat.setMaxFuel(60);
+        fiat.setConsumption(6);
+        fiat.showData();
         
-        System.out.println("Model: " + fiat.model);
-        System.out.println("Model: " + fiat.model);
-        System.out.println("Model: " + fiat.model);
-        System.out.println("Model: " + fiat.model);
-        System.out.println("Model: " + fiat.model);
-        System.out.println("Model: " + fiat.model);
+        Car ford = new Car("Ford", 2015,"red",40, 10, 5);
+        fiat.showData();
+       // ford.model = "Focus";
+       // ford.buildYear = 2015;
+       // ford.color = "white";
+       // ford.consumption = 10;
+       // ford.maxSpeed = 220;
+       // ford.currentFuel = 30;
+       // ford.maxFuel = 60;
+        ford.setModel("Focus");
+        ford.setBuildYear(2015);
+        ford.setConsumption(5);
+        ford.setColor("white");
         
-        Car ford = new Car ();
-        ford.model = "Ford Fiesta";
-        ford.buildYear = 2015; 
+        ford.showData();
         
-        System.out.println("Model: " + ford.model);
-        System.out.println("Godina proizvodnje: " + ford.buildYear);
+        Car Honda = new Car("Civic", 2015, "red",50, 20, 10);
+        Honda.showData();
         
-        
-        
+        //System.out.println("Model: " + ford.getModel());
     }
-    
 }
